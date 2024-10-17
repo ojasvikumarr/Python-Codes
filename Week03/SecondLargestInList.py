@@ -1,6 +1,7 @@
 input_list = input("Please enter the required list : ")
 list = input_list.split()
 
+# DIrectly converting the string into a list
 for i in range(len(list)):
     list[i] = int(list[i])
     
