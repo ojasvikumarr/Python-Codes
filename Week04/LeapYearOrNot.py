@@ -10,3 +10,4 @@ while(True):
     else:
         print("This is not a Leap Year!!")
 
+datetime.date.today()
