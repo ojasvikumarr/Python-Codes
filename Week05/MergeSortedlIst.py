@@ -22,4 +22,8 @@ while( j < len(row2) ):
     ans.append(row2[j])
     j = j+1 
 
+ans.extend(row1[i:])
+ans.extend(row2[j:])
+
+# This also does the same thing
 print(ans)
