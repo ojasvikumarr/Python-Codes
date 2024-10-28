@@ -1,7 +1,23 @@
-from PIL import Image 
+import cv2 
 
-img = Image.open("Week08/lena.jpg")
+# Read the image
 
-transposed_img = img.transpose(Image.FLIP_LEFT_RIGHT)
-# save it to a human understandable Image
-transposed_img.save("resolved_img.jpg")
+img = cv2.imread("Week08/lena.jpg")
+
+# preparation for CLAHE
+
+clahe =cv2.createCLAHE()
+
+# Convert to gray scaled img 
+
+gray_img = cv2.cvtColor(img , cv2.COLOR_BRG2GRAY)
+
+# Apply Enchancement
+
+enchanced_img = clahe.apply(gray_img)
+
+# Save it to the File
+
+cv2.imwrite("Week08/enchanced_img.jpg" , enchanced_img)
+
+print("Done Enchancement")
