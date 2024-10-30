@@ -1,4 +1,5 @@
 array = list(map(int , input().split()))
+counter = 0
 
 def sorting(array):
     for i in range(len(array)):
@@ -10,4 +11,16 @@ def sorting(array):
 
     print(array)
 
-sorting(array)
+# sorting(array)
+def sortingReal(arr):
+    for i in range(len(arr)):
+        for j in range(len(arr)-1):
+            if(arr[j] > arr[j+1]):
+                temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp 
+                counter += 1
+    print(arr)
+    print(counter)
+
+sortingReal(array)
